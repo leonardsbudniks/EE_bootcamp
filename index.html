@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Engineer Bootcamp | RTU</title>
+    <meta name="description"
+        content="Piesakies Ethical Engineer Bootcamp RTU un kļūsti par līderi mākslīgā intelekta ētiskā izmantošanā inženierzinātnēs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0F172A;
+            --teal: #0D9488;
+            --teal-hover: #0F766E;
+            --white: #FFFFFF;
+            --gray-light: #F8FAFC;
+            --gray-text: #475569;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--navy);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--gray-text);
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--gray-text);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--teal);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--teal-hover);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 650px;
+            /* Narrower width for reading comfort, akin to nice markdown pages */
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--gray-light);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-img {
+            max-height: 40px;
+        }
+
+        .rtu-logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--navy);
+            letter-spacing: -0.5px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--teal);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--teal-hover);
+            color: var(--white);
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .hero {
+            padding: 2rem 0 1rem;
+            text-align: left;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .event-meta {
+            background-color: var(--gray-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--teal);
+        }
+
+        .event-meta ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .event-meta li {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .event-meta strong {
+            display: block;
+            color: var(--navy);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .process-steps {
+            list-style-type: decimal;
+        }
+
+        .process-steps li {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .process-steps span {
+            font-weight: 400;
+            color: var(--gray-text);
+        }
+
+        .closing {
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            background-color: var(--navy);
+            color: var(--white);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .closing h2 {
+            border-bottom: none;
+            color: var(--white);
+            margin-top: 0;
+        }
+
+        .closing p {
+            color: #CBD5E1;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding: 3rem 1.5rem;
+            background-color: var(--gray-light);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray-text);
+        }
+
+        .eu-disclaimer {
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .eu-logo {
+            max-height: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 1rem 0;
+            }
+
+            header {
+                justify-content: center;
+            }
+
+            .closing {
+                padding: 2rem 1.5rem;
+            }
+
+            .event-meta ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-group">
+            <div class="rtu-logo">RTU</div>
+            <img src="https://ethicalengineer.eu/wp-content/uploads/2024/08/Logo.png"
+                alt="Ethical Engineer Project Logo" class="logo-img">
+        </div>
+        <a href="#" class="btn">Piesakies [SAITE]</a>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Vai esi domājis par mākslīgā intelekta ētisku izmantošanu?</h1>
+            <br>
+            <p>Varbūt katru reizi, atverot OpenAI, Anthropic vai Google produktus, uzdod sev jautājumu — vai tas, ko es
+                daru, vispār ir ētiski? Vai varbūt tieši pretēji — izmanto tehnoloģiju un par šādiem jautājumiem
+                neaizdomājies?</p>
+            <p>Neatkarīgi no tā, kurā grupā sevi pieskaiti, <strong>Ethical Engineer Bootcamp</strong> ir vieta, kur par
+                to padomāt praktiski.</p>
+        </section>
+
+        <section class="event-meta">
+            <ul>
+                <li><strong>Datums:</strong> 12 maijs 2026 (Otrdiena)</li>
+                <li><strong>Laiks:</strong> 13:00 – 18:00</li>
+                <li><strong>Vieta:</strong> RTU (precīza telpa tiks paziņota)</li>
+                <li><strong>Mērķauditorija:</strong> RTU studenti</li>
+                <li><strong>Vietas:</strong> Ierobežots skaits</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Par projektu</h2>
+            <p>"Ethical Engineer" ir Erasmus+ sadarbības partnerības projekts augstākajā izglītībā (KA220-HED), kura
+                mērķis ir integrēt MI ētikas mācīšanu inženierzinātņu programmās Eiropas augstskolās. Projektā piedalās
+                seši partneri no sešām valstīm — Čehijas Tehniskā universitāte Prāgā (koordinators), RTU, kā arī
+                organizācijas no Francijas, Īrijas, Nīderlandes, Dānijas un Vācijas. Projekta ietvaros tiek izstrādāti
+                mācību materiāli, gadījumu izpētes un bootcamp metodika, ko augstskolas visā Eiropā varēs brīvi izmantot
+                savā mācību procesā.</p>
+        </section>
+
+        <section>
+            <h2>Kas notiks?</h2>
+            <p>12. maijā no 13:00 līdz 18:00 RTU notiks viens no projekta bootcamp pasākumiem — intensīva praktiska
+                pēcpusdiena, kurā starpdisciplināras studentu komandas strādās ar reāliem MI ieviešanas scenārijiem no
+                Latvijas uzņēmumiem. Dienas laikā kopā ar komandu apgūsi MI ētikas pamatprincipus — autonomiju,
+                taisnīgumu, caurspīdīgumu, privātumu, atbildību — un pielietosi tos, izstrādājot ētisku MI ieviešanas
+                plānu konkrētam uzņēmumam.</p>
+        </section>
+
+        <section>
+            <h2>Priekšzināšanas</h2>
+            <p>Priekšzināšanas par MI vai ētiku nav nepieciešamas. Taču nāc ar savu redzējumu — tieši tas ir bootcamp
+                vērtīgākais resurss. Komandās būs studenti no dažādām RTU programmām, un labākie risinājumi rodas tad,
+                kad satiekas atšķirīgi skatpunkti.</p>
+        </section>
+
+        <section>
+            <h2>Process</h2>
+            <p>Darba process notiek trīs soļos:</p>
+            <ol class="process-steps">
+                <li><span>Ar MI palīdzību ģenerē ieviešanas plānu</span></li>
+                <li><span>Analizē to ar ētiskās diagnostikas kontrolsarakstu</span></li>
+                <li><span>Pārstrādā, novēršot atrastās nepilnības</span></li>
+            </ol>
+            <p>Diena noslēdzas ar komandu prezentācijām uzņēmumu pārstāvju un ekspertu žūrijas priekšā. Labākie
+                risinājumi saņems balvas.</p>
+        </section>
+
+        <section>
+            <h2>Ieguvumi</h2>
+            <ul>
+                <li>Praktiska pieredze MI ētikas jautājumos, kas ir arvien pieprasītāka darba tirgū</li>
+                <li>Iespēja strādāt ar reālu uzņēmuma scenāriju, nevis mācību piemēru</li>
+                <li>Domubiedri no citām RTU programmām</li>
+            </ul>
+        </section>
+
+        <section class="closing">
+            <h2>Gatavs piedalīties?</h2>
+            <p>Vietu skaits ir ierobežots. Pirms piesakies, izvērtē — vai esi gatavs veltīt pēcpusdienu, lai kopā ar
+                komandu radītu risinājumu, ko novērtēs arī nozares pārstāvji.</p>
+            <a href="#" class="btn">Piesakies šeit [SAITE]</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <img src="https://ethicalengineer.eu/wp-content/uploads/2024/02/EN_Co-fundedbytheEU_RGB_POS-1-1.png"
+            alt="Co-funded by the EU" class="eu-logo">
+        <div class="eu-disclaimer">
+            This project has been funded with support from the European Commission. The author is solely responsible for
+            this publication (communication) and the Commission accepts no responsibility for any use may be made of the
+            information contained therein.
+        </div>
+    </footer>
+
+</body>
+
+</html>
